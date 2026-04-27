@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -43,9 +43,9 @@ nav {
 
 .nav-logo {
   display: flex; align-items: center; gap: .55rem;
-  font-family: 'Noto Serif JP', serif;
-  font-size: 1.05rem; font-weight: 700;
-  color: var(--dark); text-decoration: none; letter-spacing: .04em;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.05rem; font-weight: 800;
+  color: var(--dark); text-decoration: none; letter-spacing: .03em;
 }
 
 .nav-logo img { width: 34px; height: 34px; object-fit: contain; }
@@ -116,9 +116,9 @@ nav {
 }
 
 .hero-title {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: clamp(2.2rem, 6.5vw, 4rem);
-  font-weight: 700; color: #fff;
+  font-weight: 800; color: #fff;
   line-height: 1.2; margin-bottom: 1rem;
   text-shadow: 0 2px 16px rgba(0,0,0,.3);
 }
@@ -151,19 +151,19 @@ nav {
 }
 
 .btn-primary { background: var(--lime); color: #fff; }
-.btn-primary:hover { background: var(--lime-light); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(125,189,44,.38); }
+.btn-primary:hover { background: var(--lime-light); box-shadow: 0 6px 18px rgba(125,189,44,.35); }
 
 .btn-yellow { background: var(--yellow); color: var(--dark); }
-.btn-yellow:hover { background: var(--yellow-light); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(255,224,64,.45); }
+.btn-yellow:hover { background: var(--yellow-light); box-shadow: 0 6px 18px rgba(255,224,64,.4); }
 
 .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,.65); }
-.btn-outline:hover { background: rgba(255,255,255,.14); transform: translateY(-2px); }
+.btn-outline:hover { background: rgba(255,255,255,.16); }
 
 .btn-dark { background: var(--dark); color: #fff; }
-.btn-dark:hover { background: #3c5e1c; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(46,72,18,.35); }
+.btn-dark:hover { background: #3c5e1c; box-shadow: 0 6px 18px rgba(46,72,18,.3); }
 
 .btn-line { background: #06C755; color: #fff; }
-.btn-line:hover { background: #00A847; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(6,199,85,.38); }
+.btn-line:hover { background: #00A847; box-shadow: 0 6px 18px rgba(6,199,85,.35); }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    セクション
@@ -179,9 +179,9 @@ nav {
 }
 
 .section-title {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: clamp(1.6rem, 3.2vw, 2.25rem);
-  font-weight: 700; color: var(--dark);
+  font-weight: 800; color: var(--dark);
   margin-bottom: .7rem; line-height: 1.35;
 }
 
@@ -206,10 +206,10 @@ nav {
   transition: transform .2s, box-shadow .2s, border-color .2s;
 }
 
-.card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(0,0,0,.09); border-color: var(--lime-pale); }
+.card:hover { box-shadow: 0 10px 28px rgba(0,0,0,.1); border-color: var(--lime); }
 
 .card-icon { font-size: 2rem; margin-bottom: .85rem; display: block; }
-.card h3 { font-family: 'Noto Serif JP', serif; font-size: .98rem; color: var(--dark); margin-bottom: .45rem; }
+.card h3 { font-family: 'M PLUS Rounded 1c', sans-serif; font-size: .98rem; font-weight: 700; color: var(--dark); margin-bottom: .45rem; }
 .card p { font-size: .84rem; color: var(--muted); line-height: 1.85; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -238,7 +238,7 @@ nav {
 .photo-frame:hover img { transform: scale(1.04); }
 
 .photo-frame-tilt { transform: rotate(-1.2deg); transition: transform .3s; }
-.photo-frame-tilt:hover { transform: rotate(0deg) scale(1.02); }
+.photo-frame-tilt:hover { transform: rotate(0deg); }
 
 .photo-badge {
   position: absolute; top: 14px; left: 14px;
@@ -334,7 +334,7 @@ nav {
 .conductor-photo-sub img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
 
 .conductor-name-en { font-size: .73rem; letter-spacing: .2em; text-transform: uppercase; color: var(--lime); margin-bottom: .35rem; font-weight: 700; }
-.conductor-name { font-family: 'Noto Serif JP', serif; font-size: 1.9rem; color: var(--dark); margin-bottom: .2rem; }
+.conductor-name { font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--dark); margin-bottom: .2rem; }
 .conductor-role { font-size: .82rem; color: var(--muted); letter-spacing: .1em; margin-bottom: 1.6rem; }
 .conductor-bio { color: var(--muted); font-size: .91rem; line-height: 2.1; }
 .conductor-bio + .conductor-bio { margin-top: .9rem; }
@@ -348,14 +348,14 @@ nav {
   padding: 1.6rem; border: 2px solid var(--border);
   transition: transform .2s, box-shadow .2s;
 }
-.staff-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,.09); }
+.staff-card:hover { box-shadow: 0 8px 22px rgba(0,0,0,.1); border-color: var(--lime); }
 
 .staff-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0; }
 .staff-icon.lime   { background: var(--lime-pale); }
 .staff-icon.yellow { background: var(--yellow-pale); }
 
 .staff-title { font-size: .71rem; font-weight: 700; letter-spacing: .15em; color: var(--lime); margin-bottom: .28rem; }
-.staff-name { font-family: 'Noto Serif JP', serif; font-size: 1.02rem; color: var(--dark); margin-bottom: .35rem; }
+.staff-name { font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 1.02rem; font-weight: 700; color: var(--dark); margin-bottom: .35rem; }
 .staff-desc { font-size: .83rem; color: var(--muted); }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -376,7 +376,7 @@ nav {
   pointer-events: none;
 }
 
-.message-text { font-family: 'Noto Serif JP', serif; font-size: 1rem; line-height: 2.2; color: var(--text); position: relative; }
+.message-text { font-family: 'Noto Sans JP', sans-serif; font-size: 1rem; line-height: 2.2; color: var(--text); position: relative; }
 .message-sig { margin-top: 1.2rem; font-size: .84rem; color: var(--muted); text-align: right; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -422,7 +422,7 @@ nav {
   border: 2px solid transparent;
 }
 
-.contact-method-card:hover { transform: translateY(-5px); box-shadow: 0 18px 44px rgba(0,0,0,.11); }
+.contact-method-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,.1); }
 .contact-method-card.line { background: #F0FBF4; border-color: #06C755; }
 .contact-method-card.form { background: #EEF4FF; border-color: #4A80F0; }
 
@@ -450,7 +450,7 @@ nav {
   background: radial-gradient(circle at 80% 50%, rgba(255,255,255,.15) 0%, transparent 55%);
 }
 
-.cta-band h2 { font-family: 'Noto Serif JP', serif; font-size: clamp(1.6rem, 3.8vw, 2.3rem); color: #fff; margin-bottom: .75rem; position: relative; text-shadow: 0 1px 6px rgba(0,0,0,.15); }
+.cta-band h2 { font-family: 'M PLUS Rounded 1c', sans-serif; font-size: clamp(1.6rem, 3.8vw, 2.3rem); font-weight: 800; color: #fff; margin-bottom: .75rem; position: relative; text-shadow: 0 1px 6px rgba(0,0,0,.15); }
 .cta-band p { color: rgba(255,255,255,.88); margin-bottom: 1.85rem; position: relative; font-size: .93rem; }
 
 .cta-mascot {
@@ -477,7 +477,7 @@ nav {
 
 .page-hero-tag { display: inline-block; background: var(--yellow); color: var(--dark); font-size: .71rem; font-weight: 700; letter-spacing: .2em; padding: .28rem .88rem; border-radius: 20px; margin-bottom: .9rem; }
 
-.page-hero h1 { font-family: 'Noto Serif JP', serif; font-size: clamp(1.9rem, 4.8vw, 2.9rem); color: #fff; font-weight: 700; }
+.page-hero h1 { font-family: 'M PLUS Rounded 1c', sans-serif; font-size: clamp(1.9rem, 4.8vw, 2.9rem); color: #fff; font-weight: 800; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    フッター
@@ -488,7 +488,7 @@ footer { background: var(--dark); padding: 2.75rem 1.5rem; }
 
 .footer-logo { display: flex; align-items: center; gap: .55rem; }
 .footer-logo img { width: 36px; height: 36px; object-fit: contain; opacity: .9; }
-.footer-logo span { font-family: 'Noto Serif JP', serif; color: #fff; font-size: .98rem; }
+.footer-logo span { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700; color: #fff; font-size: .98rem; }
 
 .footer-links { display: flex; gap: 1.4rem; flex-wrap: wrap; }
 .footer-links a { color: rgba(255,255,255,.5); text-decoration: none; font-size: .81rem; transition: color .2s; }
