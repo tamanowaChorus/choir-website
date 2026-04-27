@@ -502,6 +502,75 @@ footer {
 .footer-copy { width: 100%; text-align: center; font-size: .78rem; color: rgba(255,255,255,.3); border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; margin-top: .5rem; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   はんじゅちゃん紹介バー
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.mascot-bar {
+  background: var(--orange-pale);
+  border-top: 2px dashed #FFD0A8;
+  border-bottom: 2px dashed #FFD0A8;
+  padding: 1rem 1.5rem;
+}
+
+.mascot-bar-inner {
+  max-width: 1000px; margin: 0 auto;
+  display: flex; align-items: center; gap: 1.25rem;
+}
+
+.mascot-bar img {
+  width: 60px; flex-shrink: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+.mascot-bar-text { font-size: .85rem; color: var(--text); line-height: 1.8; }
+.mascot-bar-name {
+  display: inline-block;
+  font-weight: 700; font-family: 'Noto Serif JP', serif;
+  font-size: 1rem; color: var(--orange); margin-right: .4rem;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   練習風景ギャラリー
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.gallery-layout {
+  display: flex; flex-direction: column; gap: 10px;
+  margin-top: 2rem;
+}
+
+.gallery-row { display: grid; gap: 10px; }
+.gallery-row-1 { grid-template-columns: 2fr 1fr; }
+.gallery-row-2 { grid-template-columns: 1fr 1fr 1fr; }
+.gallery-row-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+.gallery-photo {
+  border-radius: 16px; overflow: hidden;
+  position: relative;
+}
+
+.gallery-photo img {
+  width: 100%; display: block;
+  object-fit: cover;
+  transition: transform .45s;
+}
+
+.gallery-row-1 .gallery-photo img { height: 300px; }
+.gallery-row-2 .gallery-photo img,
+.gallery-row-3 .gallery-photo img { height: 200px; }
+
+.gallery-photo:hover img { transform: scale(1.05); }
+
+.gallery-cta-cell {
+  border-radius: 16px; overflow: hidden;
+  background: var(--orange-pale);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: .6rem; padding: 1.5rem; text-align: center;
+  height: 200px;
+}
+
+.gallery-cta-cell img { width: 56px; animation: float 3s ease-in-out infinite; }
+.gallery-cta-cell p { font-size: .82rem; color: var(--muted); }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    アニメーション
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @keyframes float {
@@ -537,4 +606,10 @@ footer {
   .footer-links { justify-content: center; }
 
   .cta-mascot { display: none; }
+
+  .gallery-row-1 { grid-template-columns: 1fr; }
+  .gallery-row-2 { grid-template-columns: 1fr 1fr; }
+  .gallery-row-3 { grid-template-columns: 1fr 1fr; }
+  .gallery-row-1 .gallery-photo img { height: 220px; }
+  .gallery-cta-cell { height: 160px; }
 }
