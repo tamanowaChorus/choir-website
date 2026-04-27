@@ -2,10 +2,160 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>○○合唱団</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>合唱団たまのわ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>○○合唱団</h1>
-  <p>ホームページ準備中です。</p>
+
+<header>
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="photo/キャラクター.png" alt="たまのわマスコット">
+      合唱団たまのわ
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">団紹介</a></li>
+      <li><a href="conductor.html">指揮者紹介</a></li>
+      <li><a href="schedule.html">練習日程</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-bg" style="background-image: url('photo/団全体いい感じ.jpg');"></div>
+  <div class="hero-content">
+    <span class="hero-tag">🎵 広島の女声合唱団</span>
+    <h1 class="hero-title">合唱団<br>たまのわ</h1>
+    <p class="hero-sub">
+      たまたま集まった人たちの輪。<br>
+      ゆるく楽しく、でも本気で歌う女声合唱団です。
+    </p>
+    <div class="hero-btns">
+      <a href="schedule.html" class="btn btn-primary">練習日程を見る</a>
+      <a href="contact.html" class="btn btn-outline">見学・入団はこちら</a>
+    </div>
+  </div>
+  <img src="photo/キャラクター.png" alt="マスコット" class="hero-mascot">
+</section>
+
+<!-- 団紹介 -->
+<section class="section">
+  <div class="section-inner">
+    <div class="photo-split">
+      <div>
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">わたしたちについて</h2>
+        <div class="divider-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="section-lead">
+          合唱団たまのわは、広島市内で活動する女声合唱団です。
+          「たまのわ」とは<strong>「たまたま集まった人たちの輪」</strong>の略。
+          2024年のヴォーカル・アンサンブル・コンテストひろしまに出場するために結成し、
+          打ち上げのお酒の流れで常設化が決まりました。
+        </p>
+        <p class="section-lead" style="margin-top:1rem;">
+          名前の由来の通り、個性豊かなメンバーが来れるときに集まり、
+          <strong>「ゆるく楽しく長続きする」</strong>女声合唱を目指して活動しています。
+          "たまたま集まった"人たちで、その場でしかできない演奏を大切にしています。
+        </p>
+        <div style="margin-top:2rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+          <a href="conductor.html" class="btn btn-dark" style="font-size:.85rem; padding:.65rem 1.5rem;">指揮者紹介</a>
+          <a href="contact.html" class="btn btn-primary" style="font-size:.85rem; padding:.65rem 1.5rem;">見学を申し込む</a>
+        </div>
+      </div>
+      <div class="photo-frame photo-frame-tilt">
+        <img src="photo/団紹介.jpg" alt="合唱団たまのわ 集合写真">
+        <span class="photo-badge">🎵 たまのわ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 写真ギャラリー風 -->
+<section class="section bg-cream">
+  <div class="section-inner">
+    <span class="section-tag">Gallery</span>
+    <h2 class="section-title">練習のようす</h2>
+    <div class="divider-dots"><span></span><span></span><span></span></div>
+
+    <div class="photo-mosaic">
+      <div class="photo-mosaic-item pm-main">
+        <img src="photo/団全体最初の背景とか.jpg" alt="練習のようす">
+      </div>
+      <div class="photo-mosaic-item">
+        <img src="photo/団全体いい感じ.jpg" alt="ステージ練習">
+      </div>
+      <div class="photo-mosaic-item" style="aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; background:var(--orange-pale); border-radius:18px;">
+        <div style="text-align:center; padding:1.5rem;">
+          <img src="photo/キャラクター.png" alt="マスコット" style="width:80px; animation:float 3s ease-in-out infinite;">
+          <p style="margin-top:.75rem; font-size:.85rem; color:var(--muted);">一緒に歌いませんか？</p>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:.75rem; font-size:.78rem; padding:.5rem 1.2rem;">見学申込</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 活動概要カード -->
+<section class="section">
+  <div class="section-inner">
+    <span class="section-tag">Overview</span>
+    <h2 class="section-title">活動<span>概要</span></h2>
+    <div class="divider-dots"><span></span><span></span><span></span></div>
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">🗓</span>
+        <h3>練習日時</h3>
+        <p>月2回・主に日曜日<br>10:00〜13:00</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">📍</span>
+        <h3>練習場所</h3>
+        <p>広島市内の公民館・文化センター<br>（新白島・横川・広島駅周辺）</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">💰</span>
+        <h3>参加費</h3>
+        <p>社会人 1,000円 / 学生 500円<br>体験・見学は<strong>無料</strong>！</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🎤</span>
+        <h3>声部募集</h3>
+        <p>女声合唱（ソプラノ・アルト）<br>初心者〜上級者まで大歓迎</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA バナー -->
+<section class="cta-band">
+  <img src="photo/キャラクター.png" alt="" class="cta-mascot">
+  <h2>一緒に歌いませんか？</h2>
+  <p>楽しみながら上手くなる、上手くなれば楽しくなる。<br>女声合唱を楽しみたい気持ちが少しでもあれば、ぜひ来てみてください！</p>
+  <a href="contact.html" class="btn btn-outline">お問い合わせ・見学申込</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="photo/キャラクター.png" alt="">
+      <span>合唱団たまのわ</span>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">団紹介</a>
+      <a href="conductor.html">指揮者紹介</a>
+      <a href="schedule.html">練習日程</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="https://x.com/tamanowa_chorus" target="_blank" rel="noopener">X (Twitter)</a>
+    </nav>
+    <p class="footer-copy">© 2024 合唱団たまのわ</p>
+  </div>
+</footer>
+
 </body>
 </html>
