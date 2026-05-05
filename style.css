@@ -574,3 +574,137 @@ footer { background: var(--dark); padding: 2.75rem 1.5rem; }
   .gallery-cta-cell { aspect-ratio: 3/2; }
   .btn { padding: .65rem 1.4rem; font-size: .82rem; }
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   活動記録タイムライン
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: .55rem;
+  top: 0; bottom: 0;
+  width: 3px;
+  background: var(--border);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.57rem;
+  top: 1.05rem;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--lime);
+  border: 3px solid var(--surface);
+  box-shadow: 0 0 0 2px var(--lime);
+}
+
+.timeline-date {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--lime);
+  letter-spacing: .05em;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+}
+
+.timeline-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+
+.timeline-card-tag {
+  display: inline-block;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  background: var(--lime-pale);
+  color: var(--lime);
+  border: 1px solid var(--lime);
+  border-radius: 999px;
+  padding: .15rem .75rem;
+  margin-bottom: .75rem;
+}
+
+.timeline-card-tag-debut {
+  background: var(--yellow-pale);
+  color: #7a6000;
+  border-color: var(--yellow);
+}
+
+.timeline-card-title {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: .25rem;
+}
+
+.timeline-card-place {
+  font-size: .82rem;
+  color: var(--muted);
+  margin-bottom: .75rem;
+}
+
+.timeline-card-desc {
+  font-size: .88rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.timeline-songs {
+  background: var(--bg);
+  border-radius: 10px;
+  padding: .85rem 1rem;
+  margin-top: .75rem;
+}
+
+.timeline-songs-label {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--muted);
+  margin-bottom: .4rem;
+  text-transform: uppercase;
+}
+
+.timeline-songs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-songs li {
+  font-size: .86rem;
+  color: var(--text);
+  padding: .25rem 0;
+  border-bottom: 1px dashed var(--border);
+  line-height: 1.6;
+}
+
+.timeline-songs li:last-child { border-bottom: none; }
+
+@media (max-width: 768px) {
+  .timeline { padding-left: 1.5rem; }
+  .timeline-card { padding: 1.2rem 1.25rem; }
+  .timeline-card-title { font-size: 1rem; }
+}

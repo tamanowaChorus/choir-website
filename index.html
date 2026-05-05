@@ -27,6 +27,7 @@
       <li><a href="index.html" class="active">団紹介</a></li>
       <li><a href="conductor.html">指揮者紹介</a></li>
       <li><a href="schedule.html">練習日程</a></li>
+      <li><a href="history.html">活動記録</a></li>
       <li><a href="contact.html">お問い合わせ</a></li>
     </ul>
   </nav>
@@ -36,7 +37,7 @@
 <section class="hero">
   <div class="hero-bg" style="background-image: url('photo/団全体いい感じ.jpg');"></div>
   <div class="hero-content">
-    <span class="hero-tag">🎵 広島市の女声合唱団</span>
+    <span class="hero-tag">広島市の女声合唱団</span>
     <h1 class="hero-title">合唱団<br>たまのわ</h1>
     <p class="hero-sub">
       たまたま集まった人たちの輪。<br>
@@ -55,7 +56,7 @@
   <div class="mascot-bar-inner">
     <img src="photo/キャラクター.png" alt="はんじゅちゃん">
     <p class="mascot-bar-text">
-      <span class="mascot-bar-name">🥚 はんじゅちゃん</span>
+      <span class="mascot-bar-name">はんじゅちゃん</span>
       たまのわのマスコットキャラクター。半熟卵の「はんじゅくん」が女声合唱団にやってきたら「ちゃん」じゃない？ というところから生まれました。いつも団員たちをやさしく見守っています。
     </p>
   </div>
@@ -89,7 +90,6 @@
       </div>
       <div class="photo-frame photo-frame-tilt" style="background: var(--lime-pale);">
         <img src="photo/団紹介.jpg" alt="合唱団たまのわ 集合写真" style="object-fit: contain;">
-        <span class="photo-badge">🎵 たまのわ</span>
       </div>
     </div>
   </div>
@@ -104,22 +104,18 @@
 
     <div class="card-grid">
       <div class="card">
-        <span class="card-icon">🗓</span>
         <h3>練習日時</h3>
         <p>月2回・主に日曜日<br>10:00〜13:00</p>
       </div>
       <div class="card">
-        <span class="card-icon">📍</span>
         <h3>練習場所</h3>
         <p>広島市内の公民館・文化センター<br>（新白島・横川・広島駅周辺）</p>
       </div>
       <div class="card">
-        <span class="card-icon">💰</span>
         <h3>参加費</h3>
         <p>社会人 1,000円 / 学生 500円<br>体験・見学は<strong>無料</strong>！</p>
       </div>
       <div class="card">
-        <span class="card-icon">🎤</span>
         <h3>声部募集</h3>
         <p>女声合唱（ソプラノ・アルト）<br>初心者〜上級者まで大歓迎</p>
       </div>
@@ -195,6 +191,7 @@
       <a href="index.html">団紹介</a>
       <a href="conductor.html">指揮者紹介</a>
       <a href="schedule.html">練習日程</a>
+      <a href="history.html">活動記録</a>
       <a href="contact.html">お問い合わせ</a>
       <a href="https://x.com/tamanowa_chorus" target="_blank" rel="noopener">X (Twitter)</a>
     </nav>
@@ -202,5 +199,12 @@
   </div>
 </footer>
 
+
+<script>
+document.querySelectorAll('img').forEach(function(img){
+  img.setAttribute('draggable','false');
+  img.addEventListener('contextmenu',function(e){e.preventDefault();});
+});
+</script>
 </body>
 </html>

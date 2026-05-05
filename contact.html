@@ -25,6 +25,7 @@
       <li><a href="index.html">団紹介</a></li>
       <li><a href="conductor.html">指揮者紹介</a></li>
       <li><a href="schedule.html">練習日程</a></li>
+      <li><a href="history.html">活動記録</a></li>
       <li><a href="contact.html" class="active">お問い合わせ</a></li>
     </ul>
   </nav>
@@ -52,20 +53,18 @@
 
       <!-- LINE -->
       <div class="contact-method-card line">
-        <span class="contact-method-icon">💬</span>
         <h3 class="contact-method-title">公式 LINE</h3>
         <p class="contact-method-desc">
           一番早くお返事できます！<br>
           友だち追加後、以下の形式で<br>メッセージをお送りください。
         </p>
         <a href="https://line.me/R/ti/p/@994vzbel" target="_blank" rel="noopener" class="btn btn-line">
-          💬 LINE で問い合わせる
+          LINE で問い合わせる
         </a>
       </div>
 
       <!-- Googleフォーム -->
       <div class="contact-method-card form">
-        <span class="contact-method-icon">📝</span>
         <h3 class="contact-method-title">Googleフォーム</h3>
         <p class="contact-method-desc">
           メールアドレスをお持ちの方は<br>
@@ -73,7 +72,7 @@
           担当者より折り返しご連絡します。
         </p>
         <a href="https://forms.gle/RrNPgSYRLvU8esfSA" target="_blank" rel="noopener" class="btn btn-dark">
-          📝 フォームで問い合わせる
+          フォームで問い合わせる
         </a>
       </div>
 
@@ -81,7 +80,7 @@
 
     <!-- LINEの書き方 -->
     <div style="margin-top:2.5rem;">
-      <h3 style="font-family:'Noto Serif JP',serif; color:var(--dark); font-size:1.05rem; margin-bottom:1rem;">💬 LINEでのお問い合わせ例</h3>
+      <h3 style="font-family:'Noto Serif JP',serif; color:var(--dark); font-size:1.05rem; margin-bottom:1rem;">LINEでのお問い合わせ例</h3>
       <div style="background:var(--surface); border:1.5px solid var(--border); border-radius:16px; padding:1.5rem; max-width:480px; font-size:.88rem; color:var(--text); line-height:2;">
         <p>① 氏名：　山田 花子</p>
         <p>② お問い合わせ内容：　見学希望</p>
@@ -93,7 +92,7 @@
 
     <div class="info-box" style="margin-top:2rem; display:flex; align-items:center; gap:1rem;">
       <img src="photo/キャラクター.png" alt="" style="width:48px; flex-shrink:0;">
-      <p>返信は通常3営業日以内。見学希望の場合はご希望日程もお知らせいただけるとスムーズです！</p>
+      <p>担当者が確認次第ご連絡します。見学希望の場合はご希望日程もお知らせいただけるとスムーズです！</p>
     </div>
   </div>
 </section>
@@ -149,8 +148,8 @@
   <h2>一緒に歌いましょう！</h2>
   <p>あなたの参加をお待ちしています。</p>
   <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; position:relative;">
-    <a href="https://line.me/R/ti/p/@994vzbel" target="_blank" rel="noopener" class="btn btn-line">💬 LINE で問い合わせる</a>
-    <a href="https://forms.gle/RrNPgSYRLvU8esfSA" target="_blank" rel="noopener" class="btn btn-outline">📝 フォームで問い合わせる</a>
+    <a href="https://line.me/R/ti/p/@994vzbel" target="_blank" rel="noopener" class="btn btn-line">LINE で問い合わせる</a>
+    <a href="https://forms.gle/RrNPgSYRLvU8esfSA" target="_blank" rel="noopener" class="btn btn-outline">フォームで問い合わせる</a>
   </div>
 </section>
 
@@ -164,6 +163,7 @@
       <a href="index.html">団紹介</a>
       <a href="conductor.html">指揮者紹介</a>
       <a href="schedule.html">練習日程</a>
+      <a href="history.html">活動記録</a>
       <a href="contact.html">お問い合わせ</a>
       <a href="https://x.com/tamanowa_chorus" target="_blank" rel="noopener">X (Twitter)</a>
     </nav>
@@ -171,5 +171,12 @@
   </div>
 </footer>
 
+
+<script>
+document.querySelectorAll('img').forEach(function(img){
+  img.setAttribute('draggable','false');
+  img.addEventListener('contextmenu',function(e){e.preventDefault();});
+});
+</script>
 </body>
 </html>
