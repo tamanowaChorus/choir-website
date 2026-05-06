@@ -204,7 +204,20 @@ nav {
   padding: 1.75rem 1.5rem;
   border: 2px solid var(--border);
   transition: transform .2s, box-shadow .2s, border-color .2s;
+  position: relative; overflow: hidden;
 }
+
+.card-grid .card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: var(--lime);
+}
+.card-grid .card:nth-child(4n+1)::before { background: var(--lime); }
+.card-grid .card:nth-child(4n+2)::before { background: var(--yellow); }
+.card-grid .card:nth-child(4n+3)::before { background: var(--dark); }
+.card-grid .card:nth-child(4n)::before   { background: var(--lime-light); }
 
 .card:hover { box-shadow: 0 10px 28px rgba(0,0,0,.1); border-color: var(--lime); }
 
@@ -420,6 +433,16 @@ nav {
   border-radius: 22px; padding: 2.25rem 1.85rem; text-align: center;
   transition: transform .2s, box-shadow .2s;
   border: 2px solid transparent;
+  position: relative;
+}
+
+.contact-method-badge {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: #06C755; color: #fff;
+  font-size: .75rem; font-weight: 700;
+  letter-spacing: .08em; white-space: nowrap;
+  padding: .3rem 1.1rem; border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(6,199,85,.32);
 }
 
 .contact-method-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,.1); }
@@ -709,3 +732,32 @@ footer { background: var(--dark); padding: 2.75rem 1.5rem; }
   .timeline-card { padding: 1.2rem 1.25rem; }
   .timeline-card-title { font-size: 1rem; }
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   年ジャンプタブ（活動記録）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.year-tabs {
+  display: flex; gap: .6rem; justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px; margin: 2.5rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.year-tab {
+  padding: .55rem 1.6rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
+  font-size: .92rem;
+  letter-spacing: .05em;
+  transition: all .2s;
+}
+
+.year-tab:hover { background: var(--lime-pale); border-color: var(--lime); color: var(--dark); }
+.year-tab.active { background: var(--lime); border-color: var(--lime); color: #fff; }
+
+section[id^="year-"] { scroll-margin-top: 80px; }
