@@ -421,7 +421,7 @@ nav {
 .info-card { background: var(--surface); border-radius: 18px; padding: 1.4rem; border: 2px solid var(--border); }
 .info-card-icon { font-size: 1.7rem; margin-bottom: .7rem; }
 .info-card-label { font-size: .71rem; font-weight: 700; color: var(--lime); letter-spacing: .15em; text-transform: uppercase; margin-bottom: .28rem; }
-.info-card-value { font-family: 'Noto Serif JP', serif; font-size: .98rem; color: var(--dark); }
+.info-card-value { font-family: 'M PLUS Rounded 1c', sans-serif; font-size: .98rem; font-weight: 700; color: var(--dark); }
 .info-card-sub { font-size: .79rem; color: var(--muted); margin-top: .18rem; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
