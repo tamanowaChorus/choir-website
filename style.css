@@ -450,7 +450,7 @@ nav {
 .contact-method-card.form { background: #EEF4FF; border-color: #4A80F0; }
 
 .contact-method-icon { font-size: 2.75rem; margin-bottom: .9rem; display: block; }
-.contact-method-title { font-family: 'Noto Serif JP', serif; font-size: 1.25rem; color: var(--dark); margin-bottom: .45rem; }
+.contact-method-title { font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--dark); margin-bottom: .45rem; }
 .contact-method-desc { font-size: .84rem; color: var(--muted); margin-bottom: 1.65rem; line-height: 1.9; }
 
 .contact-faq { margin-top: 3rem; }
@@ -934,9 +934,65 @@ section[id^="year-"] { scroll-margin-top: 80px; }
   overflow: hidden;
 }
 
-/* 画像のダウンロード抑止（iOSの長押しメニュー含む） */
+/* 画像のダウンロード抑止（iOSの長押しメニュー含む）＋ 横スクロール防止 */
 img {
+  max-width: 100%;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   レスポンシブ強化（モバイル最適化）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@media (max-width: 768px) {
+  /* タッチターゲット最低44px（iOS HIG / Material Design準拠） */
+  .btn { min-height: 44px; padding: .85rem 1.6rem; font-size: .85rem; }
+
+  /* 指揮者名を画面幅にあわせて縮小 */
+  .conductor-name { font-size: clamp(1.45rem, 5vw, 1.9rem); }
+
+  /* メッセージブロック内の余白を削減 */
+  .message-block { padding: 2rem 1.5rem; border-radius: 18px; }
+  .message-block::before { font-size: 6rem; left: 10px; top: -4px; }
+
+  /* ページヒーロー余白を縮小 */
+  .page-hero { padding: 3.5rem 1.2rem 2.75rem; }
+
+  /* お問い合わせカード余白を縮小 */
+  .contact-method-card { padding: 1.85rem 1.4rem; }
+
+  /* セクションリード読みやすさ */
+  .section-lead { font-size: .9rem; line-height: 1.9; }
+
+  /* CTAバンド余白を縮小 */
+  .cta-band { padding: 3.5rem 1.2rem; }
+
+  /* 直近の練習カードもスマホ最適化 */
+  .upcoming-card { padding: 1.2rem 1.25rem 1.1rem; }
+  .upcoming-date { font-size: 1.05rem; }
+}
+
+@media (max-width: 480px) {
+  /* 極小画面：セクション余白さらに削減 */
+  .section { padding: 3rem 1rem; }
+
+  /* マスコットバーは縦積みに */
+  .mascot-bar-inner { flex-direction: column; text-align: center; gap: .65rem; }
+
+  /* セクションタイトル・ページヒーローが折れないように */
+  .section-title { font-size: clamp(1.45rem, 6vw, 1.85rem); }
+  .page-hero h1 { font-size: clamp(1.7rem, 6.5vw, 2.4rem); }
+
+  /* お問い合わせバッジが見切れないように */
+  .contact-method-badge { font-size: .68rem; padding: .26rem .9rem; }
+
+  /* タイムライン左パディングを縮小 */
+  .timeline { padding-left: 1.1rem; }
+
+  /* ボタン padding をさらに縮小 */
+  .btn { padding: .8rem 1.35rem; font-size: .82rem; }
+
+  /* 年タブのフィット感を上げる */
+  .year-tab { padding: .5rem 1.2rem; font-size: .85rem; }
 }
