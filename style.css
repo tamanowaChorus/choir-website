@@ -761,3 +761,182 @@ footer { background: var(--dark); padding: 2.75rem 1.5rem; }
 .year-tab.active { background: var(--lime); border-color: var(--lime); color: #fff; }
 
 section[id^="year-"] { scroll-margin-top: 80px; }
+
+/* 直近の練習（Google Calendar API） */
+.upcoming-practices {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+}
+.upcoming-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 1.4rem 1.5rem 1.25rem;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.upcoming-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+.upcoming-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: var(--lime);
+  border-radius: 14px 14px 0 0;
+}
+.upcoming-card:nth-child(2)::before { background: var(--yellow); }
+.upcoming-card:nth-child(3)::before { background: var(--lime-light); }
+.upcoming-date {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 0 0 .35rem;
+}
+.upcoming-time {
+  font-size: .9rem;
+  color: var(--muted);
+  margin: 0 0 .55rem;
+  font-weight: 600;
+}
+.upcoming-title {
+  font-size: .95rem;
+  color: var(--text);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.5;
+}
+.upcoming-location {
+  font-size: .85rem;
+  color: var(--muted);
+  margin: .4rem 0 0;
+}
+.upcoming-loading,
+.upcoming-empty,
+.upcoming-error {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  padding: 1.5rem 1rem;
+  font-size: .9rem;
+}
+
+/* ===== ユーティリティ・共通コンポーネント（インラインスタイル統合） ===== */
+
+/* 小さめボタン */
+.btn-sm { font-size: .85rem; padding: .65rem 1.5rem; }
+.btn-xs { font-size: .78rem; padding: .5rem 1.2rem; }
+
+/* ボタン横並び */
+.btn-row {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* 指揮者ページのエピソードチップ */
+.episode-chip-list {
+  display: flex;
+  gap: .75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.episode-chip {
+  border-radius: 12px;
+  padding: .6rem 1rem;
+  font-size: .8rem;
+  color: var(--text);
+}
+.episode-chip--yellow { background: var(--yellow-pale); }
+.episode-chip--lime   { background: var(--lime-pale); }
+
+/* お問い合わせページのLINE記入例ボックス */
+.line-example-block { margin-top: 2.5rem; }
+.line-example-block h3 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: var(--dark);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+.line-example {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 480px;
+  font-size: .88rem;
+  color: var(--text);
+  line-height: 2;
+}
+.line-example p { margin: 0; }
+.line-example-note {
+  margin-top: .75rem;
+  font-size: .82rem;
+  color: var(--muted);
+}
+
+/* アイコン付き案内ボックス */
+.info-box--icon {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.info-box--icon img {
+  width: 48px;
+  flex-shrink: 0;
+}
+
+/* Googleカレンダー埋め込み枠 */
+.calendar-embed {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,.1);
+}
+.calendar-embed iframe {
+  border: 0;
+  display: block;
+  width: 100%;
+}
+.calendar-actions {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+/* 写真フレーム：画像を切り抜かず収めるバリアント */
+.photo-frame--contain img { object-fit: contain; }
+
+/* 中央寄せセクション（SNSなど） */
+.section--center { padding-top: 3rem; padding-bottom: 3rem; }
+.section--center .section-inner { text-align: center; }
+.section--center .divider-dots { justify-content: center; }
+.section--center .section-title { text-align: center; }
+
+/* X（Twitter）タイムライン埋め込み */
+.x-timeline-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* 画像のダウンロード抑止（iOSの長押しメニュー含む） */
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

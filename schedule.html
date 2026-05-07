@@ -62,8 +62,21 @@
   </div>
 </div>
 
-<!-- 定例練習 -->
+<!-- 直近の練習（Googleカレンダーから自動取得） -->
 <section class="section">
+  <div class="section-inner">
+    <span class="section-tag">Next Practice</span>
+    <h2 class="section-title">次回の<span>練習</span></h2>
+    <div class="divider-dots"><span></span><span></span><span></span></div>
+    <p class="section-lead">直近3件の練習予定をGoogleカレンダーから自動表示しています。</p>
+    <div id="upcoming-practices" class="upcoming-practices">
+      <p class="upcoming-loading">読み込み中…</p>
+    </div>
+  </div>
+</section>
+
+<!-- 定例練習 -->
+<section class="section bg-lime">
   <div class="section-inner">
     <span class="section-tag">Regular Practice</span>
     <h2 class="section-title">定例練習について</h2>
@@ -103,7 +116,7 @@
 </section>
 
 <!-- 練習場所 -->
-<section class="section bg-lime">
+<section class="section">
   <div class="section-inner">
     <span class="section-tag">Locations</span>
     <h2 class="section-title">練習<span>場所</span></h2>
@@ -139,22 +152,21 @@
     <span class="section-tag">Calendar</span>
     <h2 class="section-title">練習<span>カレンダー</span></h2>
     <div class="divider-dots"><span></span><span></span><span></span></div>
-    <p class="section-lead" style="margin-bottom:1.5rem;">最新の練習日程はGoogleカレンダーでご確認いただけます。</p>
+    <p class="section-lead">最新の練習日程はGoogleカレンダーでご確認いただけます。</p>
 
-    <div style="border-radius:16px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,.1);">
+    <div class="calendar-embed">
       <iframe
         src="https://calendar.google.com/calendar/embed?src=tamanowa.chorus%40gmail.com&ctz=Asia%2FTokyo"
-        style="border:0; display:block;"
         width="100%" height="500"
         frameborder="0" scrolling="no"
         title="合唱団たまのわ 練習カレンダー">
       </iframe>
     </div>
 
-    <div style="text-align:center; margin-top:1.25rem;">
+    <div class="calendar-actions">
       <a href="https://calendar.google.com/calendar/embed?src=tamanowa.chorus%40gmail.com&ctz=Asia%2FTokyo"
          target="_blank" rel="noopener"
-         class="btn btn-dark" style="font-size:.85rem; padding:.65rem 1.5rem;">
+         class="btn btn-dark btn-sm">
         カレンダーを大きく開く
       </a>
     </div>
@@ -183,16 +195,82 @@
       <a href="contact.html">お問い合わせ</a>
       <a href="https://x.com/tamanowa_chorus" target="_blank" rel="noopener">X (Twitter)</a>
     </nav>
-    <p class="footer-copy">© 2024 合唱団たまのわ</p>
+    <p class="footer-copy">© <span class="copyright-years">2024</span> 合唱団たまのわ</p>
   </div>
 </footer>
 
 
+<script src="common.js"></script>
 <script>
-document.querySelectorAll('img').forEach(function(img){
-  img.setAttribute('draggable','false');
-  img.addEventListener('contextmenu',function(e){e.preventDefault();});
-});
+// Googleカレンダーから直近の練習を取得して表示
+(function(){
+  var API_KEY = 'AIzaSyD1K24_Raq-vA0wNmhVu5-Ke8NCyQH_u-o'; // HTTPリファラー＋Calendar APIに制限済み
+  var CAL_ID  = 'tamanowa.chorus@gmail.com';
+  var MAX     = 3;
+  var container = document.getElementById('upcoming-practices');
+  if (!container) return;
+
+  if (!API_KEY || API_KEY === 'YOUR_API_KEY_HERE') {
+    container.innerHTML = '<p class="upcoming-empty">APIキー未設定のため、下のカレンダーをご覧ください。</p>';
+    return;
+  }
+
+  var url = 'https://www.googleapis.com/calendar/v3/calendars/'
+    + encodeURIComponent(CAL_ID) + '/events'
+    + '?key=' + encodeURIComponent(API_KEY)
+    + '&timeMin=' + encodeURIComponent(new Date().toISOString())
+    + '&maxResults=' + MAX
+    + '&singleEvents=true'
+    + '&orderBy=startTime';
+
+  fetch(url)
+    .then(function(r){
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function(data){
+      var items = (data && data.items) || [];
+      if (items.length === 0) {
+        container.innerHTML = '<p class="upcoming-empty">予定が登録され次第こちらに表示されます。</p>';
+        return;
+      }
+      var weekdays = ['日','月','火','水','木','金','土'];
+      var pad = function(n){ return n < 10 ? '0' + n : '' + n; };
+      var esc = function(s){
+        return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+          return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+        });
+      };
+      container.innerHTML = items.map(function(ev){
+        var startStr = ev.start.dateTime || ev.start.date;
+        var d = new Date(startStr);
+        var dateStr = d.getFullYear() + '年' + (d.getMonth()+1) + '月' + d.getDate() + '日'
+                    + '（' + weekdays[d.getDay()] + '）';
+        var timeStr = '';
+        if (ev.start.dateTime && ev.end && ev.end.dateTime) {
+          var s = new Date(ev.start.dateTime);
+          var e = new Date(ev.end.dateTime);
+          timeStr = pad(s.getHours()) + ':' + pad(s.getMinutes())
+                  + ' 〜 ' + pad(e.getHours()) + ':' + pad(e.getMinutes());
+        } else {
+          timeStr = '終日';
+        }
+        var title = esc(ev.summary || '練習');
+        var loc = ev.location
+          ? '<p class="upcoming-location">📍 ' + esc(ev.location) + '</p>'
+          : '';
+        return '<div class="upcoming-card">'
+          + '<p class="upcoming-date">' + dateStr + '</p>'
+          + '<p class="upcoming-time">' + timeStr + '</p>'
+          + '<p class="upcoming-title">' + title + '</p>'
+          + loc
+          + '</div>';
+      }).join('');
+    })
+    .catch(function(){
+      container.innerHTML = '<p class="upcoming-error">予定を取得できませんでした。下のカレンダーをご確認ください。</p>';
+    });
+})();
 </script>
 </body>
 </html>

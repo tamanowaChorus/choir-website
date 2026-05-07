@@ -106,13 +106,13 @@
           <strong>「ゆるく楽しく長続きする」</strong>女声合唱を目指して広島市内各所で活動しています。
           "たまたま集まった"人たちで、その場でしかできない演奏を大切にしています。
         </p>
-        <div style="margin-top:2rem; display:flex; gap:.75rem; flex-wrap:wrap;">
-          <a href="conductor.html" class="btn btn-dark" style="font-size:.85rem; padding:.65rem 1.5rem;">指揮者紹介</a>
-          <a href="contact.html" class="btn btn-primary" style="font-size:.85rem; padding:.65rem 1.5rem;">見学を申し込む</a>
+        <div class="btn-row">
+          <a href="conductor.html" class="btn btn-dark btn-sm">指揮者紹介</a>
+          <a href="contact.html" class="btn btn-primary btn-sm">見学を申し込む</a>
         </div>
       </div>
-      <div class="photo-frame photo-frame-tilt" style="background: var(--lime-pale);">
-        <img src="photo/団紹介.jpg" alt="合唱団たまのわ 集合写真" loading="lazy" style="object-fit: contain;">
+      <div class="photo-frame photo-frame-tilt photo-frame--contain" style="background: var(--lime-pale);">
+        <img src="photo/団紹介.jpg" alt="合唱団たまのわ 集合写真" loading="lazy">
       </div>
     </div>
   </div>
@@ -146,7 +146,22 @@
   </div>
 </section>
 
-<!-- 練習風景ギャラリー -->
+<!-- X（Twitter）タイムライン -->
+<section class="section bg-yellow">
+  <div class="section-inner">
+    <span class="section-tag">Latest Updates</span>
+    <h2 class="section-title">最新の<span>お知らせ</span></h2>
+    <div class="divider-dots"><span></span><span></span><span></span></div>
+    <p class="section-lead">活動の最新情報はXでお届けしています。</p>
+
+    <div class="x-timeline-wrap">
+      <a class="twitter-timeline" data-lang="ja" data-height="500" href="https://twitter.com/tamanowa_chorus?ref_src=twsrc%5Etfw">Tweets by tamanowa_chorus</a>
+    </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</section>
+
+<!-- 旧：練習風景ギャラリー（復元時はコメント解除）
 <section class="section bg-yellow">
   <div class="section-inner">
     <span class="section-tag">Gallery</span>
@@ -155,7 +170,6 @@
     <p class="section-lead">みんなで歌って、笑って。毎回の練習が楽しい時間です。</p>
 
     <div class="gallery-layout">
-      <!-- 行1：本格練習シーン（大）＋ガッツポーズ -->
       <div class="gallery-row gallery-row-1">
         <div class="gallery-photo">
           <img src="photo/練習風景/S__86597705_0.jpg" alt="指揮者と合唱団の練習風景" loading="lazy">
@@ -165,7 +179,6 @@
         </div>
       </div>
 
-      <!-- 行2：3ショット -->
       <div class="gallery-row gallery-row-2">
         <div class="gallery-photo">
           <img src="photo/練習風景/S__86597701_0.jpg" alt="練習風景" loading="lazy">
@@ -178,7 +191,6 @@
         </div>
       </div>
 
-      <!-- 行3：残り2枚＋CTAセル -->
       <div class="gallery-row gallery-row-3">
         <div class="gallery-photo">
           <img src="photo/練習風景/S__86597702_0.jpg" alt="練習後のひとコマ" loading="lazy">
@@ -189,12 +201,13 @@
         <div class="gallery-cta-cell">
           <img src="photo/キャラクター.png" alt="はんじゅちゃん" loading="lazy">
           <p>一緒に歌いませんか？</p>
-          <a href="contact.html" class="btn btn-primary" style="font-size:.78rem; padding:.5rem 1.2rem;">見学申込</a>
+          <a href="contact.html" class="btn btn-primary btn-xs">見学申込</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+-->
 
 <!-- CTA バナー -->
 <section class="cta-band">
@@ -218,16 +231,11 @@
       <a href="contact.html">お問い合わせ</a>
       <a href="https://x.com/tamanowa_chorus" target="_blank" rel="noopener">X (Twitter)</a>
     </nav>
-    <p class="footer-copy">© 2024 合唱団たまのわ</p>
+    <p class="footer-copy">© <span class="copyright-years">2024</span> 合唱団たまのわ</p>
   </div>
 </footer>
 
 
-<script>
-document.querySelectorAll('img').forEach(function(img){
-  img.setAttribute('draggable','false');
-  img.addEventListener('contextmenu',function(e){e.preventDefault();});
-});
-</script>
+<script src="common.js"></script>
 </body>
 </html>

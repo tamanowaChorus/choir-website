@@ -95,17 +95,17 @@
         </p>
 
         <!-- ちょっとしたエピソードカード -->
-        <div style="display:flex; gap:.75rem; margin-top:2rem; flex-wrap:wrap;">
-          <div style="background:var(--orange-pale); border-radius:12px; padding:.6rem 1rem; font-size:.8rem; color:var(--text);">
+        <div class="episode-chip-list">
+          <div class="episode-chip episode-chip--yellow">
             ⚽ サンフレッチェ・カープの熱烈ファン
           </div>
-          <div style="background:var(--green-pale); border-radius:12px; padding:.6rem 1rem; font-size:.8rem; color:var(--text);">
+          <div class="episode-chip episode-chip--lime">
             💍 旧姓：奥村（最近結婚しました！）
           </div>
         </div>
 
-        <div style="margin-top:2rem;">
-          <a href="contact.html" class="btn btn-primary" style="font-size:.85rem; padding:.65rem 1.5rem;">見学・入団のお問い合わせ</a>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary btn-sm">見学・入団のお問い合わせ</a>
         </div>
       </div>
     </div>
@@ -153,16 +153,11 @@
       <a href="contact.html">お問い合わせ</a>
       <a href="https://x.com/tamanowa_chorus" target="_blank" rel="noopener">X (Twitter)</a>
     </nav>
-    <p class="footer-copy">© 2024 合唱団たまのわ</p>
+    <p class="footer-copy">© <span class="copyright-years">2024</span> 合唱団たまのわ</p>
   </div>
 </footer>
 
 
-<script>
-document.querySelectorAll('img').forEach(function(img){
-  img.setAttribute('draggable','false');
-  img.addEventListener('contextmenu',function(e){e.preventDefault();});
-});
-</script>
+<script src="common.js"></script>
 </body>
 </html>

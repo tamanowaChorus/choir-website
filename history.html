@@ -219,16 +219,12 @@
       <a href="contact.html">お問い合わせ</a>
       <a href="https://x.com/tamanowa_chorus" target="_blank" rel="noopener">X (Twitter)</a>
     </nav>
-    <p class="footer-copy">© 2024 合唱団たまのわ</p>
+    <p class="footer-copy">© <span class="copyright-years">2024</span> 合唱団たまのわ</p>
   </div>
 </footer>
 
+<script src="common.js"></script>
 <script>
-document.querySelectorAll('img').forEach(function(img){
-  img.setAttribute('draggable','false');
-  img.addEventListener('contextmenu',function(e){e.preventDefault();});
-});
-
 // 年タブのアクティブ状態をスクロールで切り替え
 (function(){
   var tabs = document.querySelectorAll('.year-tab');

@@ -104,19 +104,19 @@
     </div>
 
     <!-- LINEの書き方 -->
-    <div style="margin-top:2.5rem;">
-      <h3 style="font-family:'Noto Serif JP',serif; color:var(--dark); font-size:1.05rem; margin-bottom:1rem;">LINEでのお問い合わせ例</h3>
-      <div style="background:var(--surface); border:1.5px solid var(--border); border-radius:16px; padding:1.5rem; max-width:480px; font-size:.88rem; color:var(--text); line-height:2;">
+    <div class="line-example-block">
+      <h3>LINEでのお問い合わせ例</h3>
+      <div class="line-example">
         <p>① 氏名：　山田 花子</p>
         <p>② お問い合わせ内容：　見学希望</p>
         <p>③ 合唱歴（任意）：　高校の合唱部経験あり</p>
         <p>④ パート（任意）：　ソプラノ</p>
       </div>
-      <p style="margin-top:.75rem; font-size:.82rem; color:var(--muted);">※ ③④は必須ではありません。担当者が確認後、ご連絡いたします。</p>
+      <p class="line-example-note">※ ③④は必須ではありません。担当者が確認後、ご連絡いたします。</p>
     </div>
 
-    <div class="info-box" style="margin-top:2rem; display:flex; align-items:center; gap:1rem;">
-      <img src="photo/キャラクター.png" alt="" loading="lazy" style="width:48px; flex-shrink:0;">
+    <div class="info-box info-box--icon">
+      <img src="photo/キャラクター.png" alt="" loading="lazy">
       <p>担当者が確認次第ご連絡します。見学希望の場合はご希望日程もお知らせいただけるとスムーズです！</p>
     </div>
   </div>
@@ -155,13 +155,13 @@
 </section>
 
 <!-- SNSリンク -->
-<section class="section" style="padding-top:3rem; padding-bottom:3rem;">
-  <div class="section-inner" style="text-align:center;">
+<section class="section section--center">
+  <div class="section-inner">
     <span class="section-tag">SNS</span>
-    <h2 class="section-title" style="text-align:center;">SNSも<span>フォローしてね</span></h2>
-    <div class="divider-dots" style="justify-content:center;"><span></span><span></span><span></span></div>
+    <h2 class="section-title">SNSも<span>フォローしてね</span></h2>
+    <div class="divider-dots"><span></span><span></span><span></span></div>
     <a href="https://x.com/tamanowa_chorus" target="_blank" rel="noopener"
-       class="btn btn-dark" style="font-size:.9rem;">
+       class="btn btn-dark btn-sm">
       𝕏 &nbsp;@tamanowa_chorus をフォロー
     </a>
   </div>
@@ -172,7 +172,7 @@
   <img src="photo/キャラクター.png" alt="" class="cta-mascot" loading="lazy">
   <h2>一緒に歌いましょう！</h2>
   <p>あなたの参加をお待ちしています。</p>
-  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; position:relative;">
+  <div class="cta-actions">
     <a href="https://line.me/R/ti/p/@994vzbel" target="_blank" rel="noopener" class="btn btn-line">LINE で問い合わせる</a>
     <a href="https://forms.gle/RrNPgSYRLvU8esfSA" target="_blank" rel="noopener" class="btn btn-outline">フォームで問い合わせる</a>
   </div>
@@ -192,16 +192,11 @@
       <a href="contact.html">お問い合わせ</a>
       <a href="https://x.com/tamanowa_chorus" target="_blank" rel="noopener">X (Twitter)</a>
     </nav>
-    <p class="footer-copy">© 2024 合唱団たまのわ</p>
+    <p class="footer-copy">© <span class="copyright-years">2024</span> 合唱団たまのわ</p>
   </div>
 </footer>
 
 
-<script>
-document.querySelectorAll('img').forEach(function(img){
-  img.setAttribute('draggable','false');
-  img.addEventListener('contextmenu',function(e){e.preventDefault();});
-});
-</script>
+<script src="common.js"></script>
 </body>
 </html>
