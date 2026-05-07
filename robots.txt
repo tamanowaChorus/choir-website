@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tamanowachorus.github.io/choir-website/sitemap.xml
